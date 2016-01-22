@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
   root 'index#actions'
-
-  get 'videos' => 'videos#show'
-  get 'users' => 'users#show'
+  get 'videos' => 'videos#index'
+  get 'users' => 'users#index'
 
   resources :users, controller: 'users'
   resources :videos, controller: 'videos'
+  resources :users_videos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

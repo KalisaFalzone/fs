@@ -6,12 +6,13 @@ In the source code we have a Rails application with a seeds.rb file that generat
 
 ### Goals:
 
-- Create controllers for Videos and Users
-- Create actions for index and show for both Videos and Users
-- Create corresponding routes
-- Use Model association to link video and users
-- Create views for index and show for video, user
-  - The index page should list ALL of each resource and contain links to the show page for a resource
+done - Create controllers for Videos and Users
+done - Create actions for index and show for both Videos and Users
+done - Create corresponding routes
+done - Use Model association to link video and users
+done - Create views for index and show for video, user
+done - The index page should list ALL of each resource
+  - and contain links to the show page for a resource
     - i.e The Users index can have a list of all users and when the user is clicked, the user should be taken to the show page
   - The show page should just show the attributes of a resource
     - This includes showing the Videos associated with the Users and Vice Versa.
