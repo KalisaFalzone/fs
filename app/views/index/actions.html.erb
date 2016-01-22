@@ -7,21 +7,31 @@
         <div class="col s2">
         </div>
         <div class="col s4">
-            <h3>Users</h3>
+            <h3>
+            Users
+            </h3>
+            <h5>
+            <%=link_to "Go to All Users Page", "/users/" %>
+            </h5>
             <ul>
               <% @users.each do |user| %>
                 <li>
-                  <%=user.name%>
+                <%=link_to user.name, "/users/" + user.id.to_s %>
                 </li>
               <% end %>
             </ul>
         </div>
         <div class="col s4">
-            <h3>Videos</h3>
+            <h3>
+            Videos
+            </h3>
+            <h5>
+            <%=link_to "Go to All Videos Page", "/videos/" %>
+            </h5>
             <ul>
               <% @videos.each do |video| %>
               <li>
-                <%=video.title%>
+              <%=link_to video.title, "/videos/" + video.id.to_s %>
               </li>
               <% end %>
             </ul>

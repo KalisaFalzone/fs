@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Users</title>
-</head>
-<body>
-<h1>
-A List of All Users
-</h1>
-
-</body>
-</html>
+<div class="row">
+    <div class="headline">
+        <h1>
+        <%= @current_user.name %>
+        </h1>
+        <h5>
+        <%=link_to 'Back to All Users', "/users/" %>
+        </h5>
+    </div>
+</div>
+<div class="row">
+ <h4>Videos viewed by this user:</h4>
+</div>
+<div class="row">
+    <div class="col s4">
+    </div>
+    <div class="col s8">
+        <% if @user_videos == nil %>
+        <div>
+            No one has viewed this video
+        </div>
+        <% else %>
+        <div>
+            <ul>
+              <% @user_video_titles.each do |name| %>
+                <li>
+                    video title: <%name%>
+                </li>
+              <% end %>
+            </ul>
+        </div>
+      <% end %>
+    </div>
+    <div class="col s4">
+    </div>
+</div>

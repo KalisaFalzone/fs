@@ -1,16 +1,19 @@
 <div class="col s12">
+    <div class="headline">
     <h1 class="headline">A List of All Videos
     </h1>
+    <h5>
+        <%=link_to 'Back to Index', "/" %>
+    </h5>
     </div>
     <div class="row">
         <div class="col s4">
         </div>
         <div class="col s4">
-            <h3>Videos</h3>
             <ul>
               <% @videos.each do |video| %>
                 <li>
-                  <%=video.title%>
+                  <%=link_to video.title, "/videos/" + video.id.to_s %>
                 </li>
               <% end %>
             </ul>

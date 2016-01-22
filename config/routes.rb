@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'index#actions'
   get 'videos' => 'videos#index'
   get 'users' => 'users#index'
+  get '/videos/:video_id' => 'videos#show'
+  get '/users/:user_id' => 'users#show'
 
   resources :users, controller: 'users'
   resources :videos, controller: 'videos'
